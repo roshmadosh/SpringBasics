@@ -1,5 +1,6 @@
 package link.hiroshisprojects.springbasics.xml;
 
+import link.hiroshisprojects.springbasics.cats.CatService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

@@ -24,6 +24,10 @@ dependencies {
     // https://mvnrepository.com/artifact/org.springframework/spring-core
     implementation("org.springframework:spring-context:5.3.24")
 
+    // https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all
+    implementation("org.codehaus.groovy:groovy-all:3.0.9")
+
+
 }
 
 tasks.named<Test>("test") {

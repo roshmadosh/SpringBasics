@@ -6,7 +6,7 @@
 
     <!-- services -->
 
-    <bean id="catService" class="link.hiroshisprojects.springbasics.xml.CatService">
+    <bean id="catService" class="link.hiroshisprojects.springbasics.cats.CatService">
         <property name="catDao" ref="catDao"/>
         <!-- additional collaborators and configuration for this bean go here -->
     </bean>
