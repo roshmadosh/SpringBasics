@@ -18,6 +18,9 @@ dependencies {
     // Use JUnit Jupiter for testing.
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.1")
 
+    // https://mvnrepository.com/artifact/com.github.stefanbirkner/system-lambda
+    testImplementation("com.github.stefanbirkner:system-lambda:1.2.1")
+
     // https://mvnrepository.com/artifact/org.springframework/spring-core
     implementation("org.springframework:spring-context:5.3.24")
 
