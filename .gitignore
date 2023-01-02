@@ -6,3 +6,6 @@ build
 
 # Intellij
 .idea
+
+# Some of Gradle's external libraries
+lib
