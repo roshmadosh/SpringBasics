@@ -4,8 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- services -->
-
     <bean id="catDao" class="link.hiroshisprojects.springbasics.cats.CatDao">
         <!-- additional collaborators and configuration for this bean go here -->
     </bean>

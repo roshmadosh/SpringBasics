@@ -5,7 +5,5 @@ beans {
 
     catDao(CatDao){}
 
-    catService(CatService) {
-        catDao = catDao
-    }
+    catService(CatService, ref('catDao'))
 }
