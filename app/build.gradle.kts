@@ -1,6 +1,6 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
-    application
+    java
 }
 
 java {
@@ -17,14 +17,19 @@ repositories {
 dependencies {
     // Use JUnit Jupiter for testing.
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.1")
-}
 
-application {
-    // Define the main class for the application.
-    mainClass.set("link.hiroshisprojects.springbasics.App")
+    // https://mvnrepository.com/artifact/org.springframework/spring-core
+    implementation("org.springframework:spring-context:5.3.24")
+
 }
 
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+task("xml", JavaExec::class) {
+    group = "runnables"
+    main = "link/hiroshisprojects/springbasics/xml/XmlMain"
+    classpath = sourceSets["main"].runtimeClasspath
 }
