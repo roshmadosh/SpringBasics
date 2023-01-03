@@ -16,4 +16,5 @@ Project for better understanding how Spring works by going through minimal examp
 - When injecting `request` or `session`-scoped beans into singleton beans, a proxy needs to be injected in place of the bean being injected. This is because singleton beans only instantiate their collaborator (dependencies) once during its lifetime. In XML-based configurations, the proxy is provided by including `<aop:scoped-proxy />` in the bean definition of the "child" bean.
 - Beans can have inheritance relationships, a "parent" bean can be declared abstract and won't be instantiated upon IOC container initialization.
 - `BeanPostProcessor` is an interface that designates a class as a special "configuration" bean. The logic inside BPPs are called upon each bean instantiation. Some AOP classes, included AOP auto-proxy are implemented as BPPs.
+- Don't use `@Required` for setter-injected dependencies. `@Autowired` will throw an exception if a property can't be set. The `@Autowired` annotation also has a `required` property that is by default `true` but can be set `false`.
 - 
