@@ -14,3 +14,6 @@ Project for better understanding how Spring works by going through minimal examp
 - To set lazy-initialized beans in XML config, set `<beans default-lazy-init="true">` for all beans, or `<bean lazy-init="true"/>` for a single bean.
 - Autowiring can be implemented in XML per bean by passing an `autowire` argument, e.g. `<bean autowire="constructor"/>`. This means Spring will inject constructor dependencies with the bean sharing its type (there's expected to be only one bean of that type, otherwise an exception is thrown).
 - When injecting `request` or `session`-scoped beans into singleton beans, a proxy needs to be injected in place of the bean being injected. This is because singleton beans only instantiate their collaborator (dependencies) once during its lifetime. In XML-based configurations, the proxy is provided by including `<aop:scoped-proxy />` in the bean definition of the "child" bean.
+- Beans can have inheritance relationships, a "parent" bean can be declared abstract and won't be instantiated upon IOC container initialization.
+- `BeanPostProcessor` is an interface that designates a class as a special "configuration" bean. The logic inside BPPs are called upon each bean instantiation. Some AOP classes, included AOP auto-proxy are implemented as BPPs.
+- 

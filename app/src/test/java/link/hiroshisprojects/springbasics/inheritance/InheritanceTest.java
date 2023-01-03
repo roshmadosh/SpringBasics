@@ -1,7 +1,6 @@
 package link.hiroshisprojects.springbasics.inheritance;
 
 import static com.github.stefanbirkner.systemlambda.SystemLambda.tapSystemOutNormalized;
-
 import link.hiroshisprojects.springbasics.inheritence.InheritanceMain;
 import org.junit.jupiter.api.Test;
 

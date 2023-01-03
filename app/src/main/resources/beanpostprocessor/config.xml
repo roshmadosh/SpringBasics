@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="first" class="link.hiroshisprojects.springbasics.beanpostprocessor.First">
+        <constructor-arg name="number" value="1"></constructor-arg>
+    </bean>
+    <bean name="second" class="link.hiroshisprojects.springbasics.beanpostprocessor.Second">
+        <constructor-arg name="number" value="2"></constructor-arg>
+    </bean>
+    <bean name="third" class="link.hiroshisprojects.springbasics.beanpostprocessor.Third">
+        <constructor-arg name="number" value="3"></constructor-arg>
+    </bean>
+
+    <bean class="link.hiroshisprojects.springbasics.beanpostprocessor.InstantiationTracingBPP"/>
+</beans>
