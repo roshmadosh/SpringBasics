@@ -19,6 +19,8 @@ public class EnvironmentMain {
 
 		// this should print the DEV message
 		EnvClass myClass = ctx.getBean(EnvClass.class);
+
+		DataSource dataSource = ctx.getBean(DataSource.class);
 		
 	}
 }
