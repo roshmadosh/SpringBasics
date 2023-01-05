@@ -40,3 +40,9 @@ task("xml", JavaExec::class) {
     main = "link/hiroshisprojects/springbasics/xml/XmlMain"
     classpath = sourceSets["main"].runtimeClasspath
 }
+
+task("env", JavaExec::class) {
+    group = "runnables"
+    main = "link/hiroshisprojects/springbasics/environment/EnvironmentMain"
+    classpath = sourceSets["main"].runtimeClasspath
+}
