@@ -46,3 +46,10 @@ task("env", JavaExec::class) {
     main = "link/hiroshisprojects/springbasics/environment/EnvironmentMain"
     classpath = sourceSets["main"].runtimeClasspath
 }
+
+task("event", JavaExec::class) {
+    group = "runnables"
+    main = "link/hiroshisprojects/springbasics/events/EventsMain"
+    classpath = sourceSets["main"].runtimeClasspath
+}
+
