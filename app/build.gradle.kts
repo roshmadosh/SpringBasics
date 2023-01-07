@@ -1,6 +1,6 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
-    java
+    application
 }
 
 java {
@@ -53,3 +53,13 @@ task("event", JavaExec::class) {
     classpath = sourceSets["main"].runtimeClasspath
 }
 
+task("classpath", JavaExec::class) {
+    group = "runnables"
+    main = "link/hiroshisprojects/springbasics/classpath/ClasspathMain"
+    classpath = sourceSets["main"].runtimeClasspath
+}
+task("validation", JavaExec::class) {
+    group = "runnables"
+    main = "link/hiroshisprojects/springbasics/validation/ValidationMain"
+    classpath = sourceSets["main"].runtimeClasspath
+}

@@ -9,3 +9,6 @@ build
 
 # Some of Gradle's external libraries
 lib
+
+# Bash scripts
+bash
