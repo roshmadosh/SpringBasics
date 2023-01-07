@@ -27,6 +27,11 @@ dependencies {
     // https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all
     implementation("org.codehaus.groovy:groovy-all:3.0.9")
 
+	// https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
+	implementation("org.aspectj:aspectjweaver:1.9.6")
+
+	// https://mvnrepository.com/artifact/org.aspectj/aspectjrt
+	implementation("org.aspectj:aspectjrt:1.9.6")
 
 }
 
@@ -61,5 +66,11 @@ task("classpath", JavaExec::class) {
 task("validation", JavaExec::class) {
     group = "runnables"
     main = "link/hiroshisprojects/springbasics/validation/ValidationMain"
+    classpath = sourceSets["main"].runtimeClasspath
+}
+
+task("aop", JavaExec::class) {
+    group = "runnables"
+    main = "link/hiroshisprojects/springbasics/aop/AopMain"
     classpath = sourceSets["main"].runtimeClasspath
 }

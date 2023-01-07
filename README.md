@@ -17,4 +17,4 @@ Project for better understanding how Spring works by going through minimal examp
 - Beans can have inheritance relationships, a "parent" bean can be declared abstract and won't be instantiated upon IOC container initialization.
 - `BeanPostProcessor` is an interface that designates a class as a special "configuration" bean. The logic inside BPPs are called upon each bean instantiation. Some AOP classes, included AOP auto-proxy are implemented as BPPs.
 - Don't use `@Required` for setter-injected dependencies. `@Autowired` will throw an exception if a property can't be set. The `@Autowired` annotation also has a `required` property that is by default `true` but can be set `false`.
-- 
+- Pointcut signatures are more interpretable/readable references to pointcut expressions. Both are string literals, so you may want to find a way to reference them by variable. 
